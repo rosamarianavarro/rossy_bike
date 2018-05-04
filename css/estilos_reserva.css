@@ -8,6 +8,9 @@
     width: 100%;
     text-align: center;
 }
+
+/* ========= estilos para div.nav ============ */
+
 .nav{
     background-color:#00AEEF;
     height: 50px;
@@ -61,4 +64,25 @@
 }
 #inicia_sesion:hover{
     box-shadow: 1px 1px 5px black;
+}
+
+/* =========== estilos para div.welcome_image ========== */
+
+.welcome_image{
+    width:100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(255,255, 255, 0.3),rgba(255, 255, 255, 0.3)), url(../img/alquiler-bicicletas-malaga.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.welcome_image h1{
+    font-size: 4em;
+    padding-top:150px;
+    color: black;
+    font-weight: 300;
+}
+
+.welcome_image .gordo{
+    font-weight: 400;
 }
