@@ -1,0 +1,37 @@
+
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+        <meta charset="utf-8">
+        <title>Geolocalización HTML5 </title>
+        <script>
+            function mostrarPosicion(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(function(position){
+                        var positionInfo = "Tu posicion actual es (" + "Latitud: " + position.coords.latitude + ", " + "Longitud: " + position.coords.longitude + ")";
+                        document.getElementById("resultado").innerHTML = positionInfo;
+                        var map = new google.maps.Map(document.getElementById('resultado'), {
+                        center: {lat: -34.397, lng: 150.644},
+                            zoom: 8
+                         });
+                    
+                    });
+                } else{
+                    alert("Lo sentimos, tu navegador no soporta la geolocalización");
+                }
+            }
+
+
+
+
+        </script>
+        </head>
+        <body>
+            <div id="resultado">
+            
+            </div>
+            <button type="button" onclick="mostrarPosicion();">Mostrar Posición</button>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdBLlpZ54HxydYm8zaTjp2S7Z8hy8PuaA&callback=initMap"
+            async defer></script>
+        </body>
+        </html>
